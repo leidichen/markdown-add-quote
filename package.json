@@ -1,0 +1,68 @@
+{
+	"name": "markdown-add-quote",
+	"displayName": "Markdown Add Quote",
+	"description": "快速给 Markdown 文档增加一个引用标签",
+	"keywords": [
+		"vscode",
+		"plugin",
+		"backquote"
+	],
+	"version": "0.0.2",
+	"publisher": "leidichen",
+	"icon": "images/logo.png",
+	"engines": {
+		"vscode": "^1.41.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.vsquote"
+	],
+	"main": "./extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.vsquote",
+				"title": "Markdown Add Quote"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "extension.vsquote",
+				"key": "alt+.",
+				"mac": "cmd+.",
+				"when": "editorTextFocus"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"when": "editorFocus && resourceLangId == markdown",
+					"command": "extension.vsquote",
+					"group": "1_modification"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.7",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.41.0",
+		"eslint": "^6.6.0",
+		"glob": "^7.1.5",
+		"mocha": "^6.2.2",
+		"typescript": "^3.6.4",
+		"vscode-test": "^1.2.2"
+	},
+	"__metadata": {
+		"id": "b9d36f8d-376f-46f4-9e0e-62a954404a54",
+		"publisherDisplayName": "leidison",
+		"publisherId": "01720665-d800-479f-abf9-1143066c1589"
+	}
+}
