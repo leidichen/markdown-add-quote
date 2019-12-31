@@ -4,10 +4,10 @@
 	"description": "快速给 Markdown 文档增加一个引用标签",
 	"keywords": [
 		"vscode",
-		"plugin",
-		"backquote"
+		"markdown",
+		"textquote"
 	],
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"publisher": "leidichen",
 	"icon": "images/logo.png",
 	"engines": {
@@ -20,6 +20,14 @@
 		"onCommand:extension.vsquote"
 	],
 	"main": "./extension",
+	"homepage": "https://github.com/leidichen/markdown-add-quote",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/leidichen/markdown-add-quote"
+	},
+	"bugs": {
+		"url": "https://github.com/leidichen/markdown-add-quote/issues"
+	},
 	"contributes": {
 		"commands": [
 			{
