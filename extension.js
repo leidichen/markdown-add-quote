@@ -26,7 +26,10 @@ function activate(context) {
 			let text = editor.document.getText(editor.selection);
 			//if not add backquote for key words or remove it 
 			if (text[0] !== '>') {
-				text = '> ' + text ;
+				temp_array = text.split('\n').map(function (line){
+					return "> " + line;
+				})
+				text = temp_array.join('\n');
 			} else {
 				text = text.replace(/》/g, '> ');
 			}
